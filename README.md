@@ -1,0 +1,3 @@
+# PermissonDemo
+处理不再询问的情况
+	  权限被拒绝后不再询问的处理。首先是要确保清单文件中有申请权限，其次在activity或fragment中重写onRequestPermissionsResult，调用PermissionHelper中的 onRequestPermissionsResult。申请权限时，进入IPermissionResult的结果回调，在applyFail中的第二个参数，表示用户是否点击了不再询问,PermissionHelper 中提供了进入应用设置申请权限goToAppSetting
